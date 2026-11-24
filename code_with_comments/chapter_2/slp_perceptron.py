@@ -12,7 +12,7 @@ class SingleLayerPerceptron:
 
     def input_extended(self, input):
         # Add a bias term (1) to the input vector
-        # Example: [x1, x2] › [1, x1, x2]
+        # Example: [x1, x2] â€º [1, x1, x2]
         return np.append([1], input)
 
     def predict(self, input):
@@ -46,7 +46,7 @@ class SingleLayerPerceptron:
         return [self.predict(inputs[i]) for i in range(len(inputs))]
 
 
-# Training data — logical AND function
+# Training data â€” logical AND function
 training_inputs = np.array([[0,0], [0,1], [1,0], [1,1]])
 training_labels = np.array([0, 0, 0, 1])  # expected output of AND logic
 training_labels.shape = (4,1)  # reshape for consistency
@@ -73,7 +73,7 @@ for i in range(num_columns):
     )
     ax[i//2, i%2].legend()
 
-# Hide the empty subplot (if number of weights isn’t a multiple of 4)
+# Hide the empty subplot (if number of weights isnâ€™t a multiple of 4)
 ax[1,1].set_visible(False)
 
 fig.suptitle('Weights estimation in subsequent epochs (Separable classes)', fontsize=13)

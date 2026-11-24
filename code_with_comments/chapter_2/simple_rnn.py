@@ -14,9 +14,9 @@ class SimpleRNN:
         self.learning_rate = learning_rate
 
         # Weight matrices initialization (small random values)
-        self.U = np.random.randn(hidden_size, input_size) * 0.01  # input › hidden
-        self.W = np.random.randn(hidden_size, hidden_size) * 0.01 # hidden › hidden (recurrent)
-        self.V = np.random.randn(output_size, hidden_size) * 0.01 # hidden › output
+        self.U = np.random.randn(hidden_size, input_size) * 0.01  # input â€º hidden
+        self.W = np.random.randn(hidden_size, hidden_size) * 0.01 # hidden â€º hidden (recurrent)
+        self.V = np.random.randn(output_size, hidden_size) * 0.01 # hidden â€º output
 
         # Bias vectors initialization
         self.b_h = np.zeros((hidden_size, 1))  # hidden bias

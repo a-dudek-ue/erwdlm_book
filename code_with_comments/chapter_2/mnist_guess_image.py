@@ -14,7 +14,7 @@ from PIL import Image
 random.seed(25032005)
 
 # --- Data preprocessing setup ---
-# The MNIST dataset consists of grayscale (1-channel) images of handwritten digits (0–9).
+# The MNIST dataset consists of grayscale (1-channel) images of handwritten digits (0â€“9).
 # Each image is converted to a tensor and normalized using the standard MNIST mean and standard deviation.
 transform = transforms.Compose([
     transforms.ToTensor(),
@@ -57,7 +57,7 @@ class SimpleCNN(nn.Module):
         # 32 feature maps * 7 * 7 = 1568 features going into the dense layer.
         self.fc1 = nn.Linear(32 * 7 * 7, 128)
 
-        # Output layer: 10 neurons, one per digit class (0–9)
+        # Output layer: 10 neurons, one per digit class (0â€“9)
         self.fc2 = nn.Linear(128, 10)
 
     def forward(self, x):
@@ -136,7 +136,7 @@ print("PIL .size ->", stitched_img_pil.size)  # Expected output: (224, 28)
 # Apply the same preprocessing (transform) as for training
 stitched_image = transform(stitched_img_pil)
 
-# Disable gradient computation since we’re only making predictions
+# Disable gradient computation since weâ€™re only making predictions
 with torch.no_grad():
     # Loop over the 8 digits in the stitched image (each 28px wide)
     for i in range(8):

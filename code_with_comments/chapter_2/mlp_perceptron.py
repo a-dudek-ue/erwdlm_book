@@ -30,7 +30,7 @@ class MultiLayerPerceptron:
 
     def initialize_weights(self, size):
         # Initialize all network weights with simple deterministic values
-        # (for clarity, not for performance — normally random initialization is used)
+        # (for clarity, not for performance â€” normally random initialization is used)
         
         # Output layer weights
         weights = np.array(list(range(1, size + 1))) / size
@@ -55,7 +55,7 @@ class MultiLayerPerceptron:
         L = X
         cache['L0'] = L  # store input layer
         
-        # Loop through each layer: input › hidden › output
+        # Loop through each layer: input â€º hidden â€º output
         for i in range(1, self.hidden_layers + 2):
             L = self.sigmoid(np.dot(L, self.network[f'W{i-1}']))
             cache[f'L{i}'] = L  # store layer outputs for backprop
@@ -111,7 +111,7 @@ class MultiLayerPerceptron:
 
 # --- Training Example ---
 
-# Input: 3 binary features › output based on custom rule (nonlinear)
+# Input: 3 binary features â€º output based on custom rule (nonlinear)
 training_inputs = np.array([
     [0, 0, 0],
     [0, 0, 1],

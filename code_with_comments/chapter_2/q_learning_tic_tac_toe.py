@@ -64,11 +64,11 @@ class TicTacToe:
 
     # --- Player move handling ---
     def player_move(self, i, j):
-        # Ignore invalid moves (already filled, game over, or not player’s turn)
+        # Ignore invalid moves (already filled, game over, or not playerâ€™s turn)
         if self.game_over or self.board[i][j] is not None or self.current_turn != "player":
             return
 
-        # Mark the player’s move
+        # Mark the playerâ€™s move
         self.board[i][j] = "O"
         self.buttons[(i, j)].config(text="O", state="disabled")
         self.save_screenshot()  # Save screenshot after player move
@@ -165,7 +165,7 @@ class TicTacToe:
     def update_q_table(self, reward):
         """
         Update the Q-table after a game.
-        Q(s,a) ‹ Q(s,a) + ? * (reward - Q(s,a))
+        Q(s,a) â€¹ Q(s,a) + ? * (reward - Q(s,a))
         """
         for state, action in self.game_history:
             if state in self.q_table and action in self.q_table[state]:

@@ -21,7 +21,7 @@ transform = transforms.Compose([
 ])
 
 # --- Load the MNIST training dataset ---
-# MNIST dataset contains 28x28 grayscale images of digits 0–9
+# MNIST dataset contains 28x28 grayscale images of digits 0â€“9
 train_dataset = datasets.MNIST(
     root='./data',          # directory where data will be downloaded/stored
     train=True,             # load the training set (not the test set)
