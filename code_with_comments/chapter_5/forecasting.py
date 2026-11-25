@@ -1,13 +1,13 @@
 # ==============================================================
-# STOCK PRICE FORECASTING – ECONOMETRIC vs DEEP LEARNING MODELS
+# STOCK PRICE FORECASTING â€“ ECONOMETRIC vs DEEP LEARNING MODELS
 # ==============================================================
 # Models included:
-#   • ARIMA (autoregressive integrated moving average)
-#   • Holt-Winters Exponential Smoothing
-#   • GARCH (volatility model)
-#   • Brownian motion baseline
-#   • GRU (Gated Recurrent Unit)
-#   • LSTM (Long Short-Term Memory)
+#   â€¢ ARIMA (autoregressive integrated moving average)
+#   â€¢ Holt-Winters Exponential Smoothing
+#   â€¢ GARCH (volatility model)
+#   â€¢ Brownian motion baseline
+#   â€¢ GRU (Gated Recurrent Unit)
+#   â€¢ LSTM (Long Short-Term Memory)
 #
 # Evaluation metrics: RMSE, MAE, MAPE
 # ==============================================================
@@ -93,7 +93,7 @@ def forecast_garch(train_series, steps):
     return pd.Series(forecast, index=range(steps))
 
 def forecast_brownian(train_series, steps, phi=0.8, noise_std=0.0):
-    """Generate Brownian motion–style forecast (random walk with drift)."""
+    """Generate Brownian motionâ€“style forecast (random walk with drift)."""
     forecast = []
     current_value = train_series.iloc[-1]
     for _ in range(steps):
