@@ -52,7 +52,7 @@ results = model.predict(source=img, imgsz=640, conf=0.3)
 for result in results:
     # Each detected face is represented as a bounding box (x1, y1, x2, y2)
     for box in result.boxes.xyxy:
-        # Expand bounding box slightly by ±10 pixels for better visibility
+        # Expand bounding box slightly by Â±10 pixels for better visibility
         x1, y1, x2, y2 = (z - 10 if i < 2 else z + 10 for (i, z) in enumerate(map(int, box)))
 
         # Draw magenta dotted lines along the top and bottom edges of the box

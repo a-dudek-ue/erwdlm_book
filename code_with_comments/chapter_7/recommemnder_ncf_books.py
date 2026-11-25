@@ -185,7 +185,7 @@ with Timer() as test_time:
     all_predictions = merged[merged.rating.isnull()].drop('rating', axis=1).drop('book', axis=1)
 
 print(f"Took {test_time} seconds for prediction.")
-# Rescale predictions to a 1–10 scale
+# Rescale predictions to a 1â€“10 scale
 all_predictions["prediction"] = all_predictions["prediction"] * 10
 
 # =====================================================
