@@ -1,5 +1,5 @@
 # ============================================================
-# IMDB SENTIMENT ANALYSIS – Comparing Deep Learning Models
+# IMDB SENTIMENT ANALYSIS â€“ Comparing Deep Learning Models
 # ============================================================
 # Models used:
 # - Bag-of-Words + Naive Bayes
