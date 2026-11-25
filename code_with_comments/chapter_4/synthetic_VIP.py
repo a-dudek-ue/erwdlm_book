@@ -44,7 +44,7 @@ mlp = MLPRegressor(
 )
 mlp.fit(X, y)
 
-# --- Compute baseline model loss (mean squared error × number of samples) ---
+# --- Compute baseline model loss (mean squared error Ã— number of samples) ---
 baseline_loss = mean_squared_error(y, mlp.predict(X)) * len(y)
 
 # --- Initialize dictionaries to store permutation importance values ---

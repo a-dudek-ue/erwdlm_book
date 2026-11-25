@@ -20,7 +20,7 @@ os.makedirs(subdirectory, exist_ok=True)
 # VGG16 expects input images of size 224x224 and RGB format.
 model = VGG16(weights='imagenet')
 
-# --- Download an example image (Jerusalem’s Jaffa Gate) from Wikipedia ---
+# --- Download an example image (Jerusalemâ€™s Jaffa Gate) from Wikipedia ---
 url = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Jaffa_Gate_Jerusalem_02.JPG/1280px-Jaffa_Gate_Jerusalem_02.JPG"
 headers = {'User-Agent': 'MyCustomUserAgent/1.0'}  # identify client to avoid request blocking
 response = requests.get(url, headers=headers)
@@ -72,7 +72,7 @@ plt.title("Superpixel Segmentation Borders")
 plt.axis("off")
 plt.savefig("Jeruzalem_explanation_superpixels.png")
 
-# --- Run LIME to explain the model’s predictions for this image ---
+# --- Run LIME to explain the modelâ€™s predictions for this image ---
 # LIME perturbs superpixels and observes the effect on model predictions
 explanation = explainer.explain_instance(
     img_np,                   # input image as numpy array

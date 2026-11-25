@@ -48,7 +48,7 @@ current = baseline = mlp.predict(X).mean()
 contributions = {}
 XX = X.copy()
 
-# Sequentially replace one feature’s column with the instance’s value
+# Sequentially replace one featureâ€™s column with the instanceâ€™s value
 for feature in XX.columns:
     XX.loc[:, feature] = instance[feature]  # replace feature column with instance value
     modified_prediction = mlp.predict(XX).mean()  # new mean prediction
@@ -71,8 +71,8 @@ S = set(range(1, m + 1))  # index set of all features {1, 2, 3}
 # --- Define the value function v(S): model output given a subset of features fixed ---
 def value_function(subset, X, mlp, instance):
     """
-    Given a subset of features, replace only those features in X with the instance’s values.
-    Then, compute the model’s average prediction.
+    Given a subset of features, replace only those features in X with the instanceâ€™s values.
+    Then, compute the modelâ€™s average prediction.
     """
     data = X.copy()
     for s in subset:

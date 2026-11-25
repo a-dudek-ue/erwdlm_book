@@ -77,7 +77,7 @@ explainer = shap.KernelExplainer(
 )
 
 # --- Compute SHAP values for the dataset ---
-# SHAP values explain each featureís contribution to the model prediction.
+# SHAP values explain each feature‚Äôs contribution to the model prediction.
 shap_values = explainer(X.values)
 
 # --- Show SHAP value breakdowns for selected individual instances ---
@@ -94,7 +94,7 @@ for i in [3, 25, 2005]:
 
 # --- Partial Dependence Plots (PDPs) ---
 # These show how the predicted outcome changes with each feature,
-# while keeping all other features constant (ìceteris paribusî).
+# while keeping all other features constant (‚Äúceteris paribus‚Äù).
 # The plots are grouped in sets of 3 features for clarity.
 for i in range(2):
     PartialDependenceDisplay.from_estimator(
